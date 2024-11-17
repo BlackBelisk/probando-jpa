@@ -8,12 +8,17 @@
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>persistenciajpa.Usuario_JPA</class>
+		<class>persistenciajpa.Aerolinea_JPA</class>
+        <class>persistenciajpa.Cliente_JPA</class>
+        <class>persistenciajpa.Reserva_JPA</class>
+        <class>persistenciajpa.RutaFinalizada_JPA</class>
+        <class>persistenciajpa.Vuelo_JPA</class>
 		
 		<properties>
 			<property name="jakarta.persistence.jdbc.driver"
 				value="org.hsqldb.jdbcDriver" />
 			<property name="jakarta.persistence.jdbc.url"
-				value="jdbc:hsqldb:file:volandoUyJPA;shutdown=true" />
+				value="jdbc:hsqldb:volandoUyJPA;shutdown=true" />
 			<property name="jakarta.persistence.jdbc.user" value="sa" />
 			<property name="jakarta.persistence.jdbc.password" value="" />
 			<property name="eclipselink.ddl-generation"

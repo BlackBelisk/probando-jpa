@@ -28,7 +28,7 @@ public class Vuelo_JPA {
 	@Column(nullable = false)
 	private LocalDate fechaAlta;
 	@ManyToOne
-	private int rutaFinalizadaID;
+	private RutaFinalizada_JPA rutaFinalizadaID;
 	
 	public Vuelo_JPA() {}
 

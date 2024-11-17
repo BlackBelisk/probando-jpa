@@ -39,7 +39,7 @@ public class RutaFinalizada_JPA {
 	@Column(nullable = false)
 	private LocalDate fechaBaja;
 	@ManyToOne
-	private int aerolineaID;
+	private Aerolinea_JPA aerolineaID;
 	
 	
 	public RutaFinalizada_JPA() {}

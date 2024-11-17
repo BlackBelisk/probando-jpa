@@ -17,9 +17,9 @@ public class Reserva_JPA{
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int ReservaID;
 	@ManyToOne
-	private int ClienteID;
+	private Cliente_JPA ClienteID;
 	@ManyToOne
-	private int VueloID;
+	private Vuelo_JPA VueloID;
 	@Enumerated @Column(nullable = false)
 	private TipoAsiento tipoAsiento;
 	@Column(nullable = false)
