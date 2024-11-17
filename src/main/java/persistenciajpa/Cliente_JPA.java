@@ -16,7 +16,6 @@ import jakarta.persistence.Table;
 @Table(name = "Clientes")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Cliente_JPA extends Usuario_JPA{
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int ClienteID;
 	
 	@Column(nullable = false)

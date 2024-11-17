@@ -3,6 +3,7 @@ package persistenciajpa;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.DiscriminatorType;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,11 +13,12 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Table;
 
-@MappedSuperclass
+//@MappedSuperclass
+@Entity
 @Table(name = "Usuarios")
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "tipo_usuario", 
-discriminatorType = DiscriminatorType.INTEGER)
+//@DiscriminatorColumn(name = "tipo_usuario", 
+//discriminatorType = DiscriminatorType.INTEGER)
 public class Usuario_JPA {
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int UsuarioID;

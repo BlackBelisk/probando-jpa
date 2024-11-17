@@ -13,7 +13,6 @@ import jakarta.persistence.Table;
 @Table(name = "Aerolineas")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Aerolinea_JPA extends Usuario_JPA{
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int AerolineaID;
 	
 	@Column(nullable = false)

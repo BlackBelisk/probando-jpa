@@ -7,12 +7,8 @@
 	<persistence-unit name="volandoUyJPA"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-		<class>persistenciajpa.Aerolinea_JPA</class>
-		<class>persistenciajpa.Cliente_JPA</class>
-		<class>persistenciajpa.Reserva_JPA</class>
-		<class>persistenciajpa.RutaFinalizada_JPA</class>
 		<class>persistenciajpa.Usuario_JPA</class>
-		<class>persistenciajpa.Vuelo_JPA</class>
+		
 		<properties>
 			<property name="jakarta.persistence.jdbc.driver"
 				value="org.hsqldb.jdbcDriver" />
