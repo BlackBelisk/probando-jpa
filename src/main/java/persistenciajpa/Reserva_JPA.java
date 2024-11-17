@@ -28,7 +28,7 @@ public class Reserva_JPA{
 	private int cantEE;
 	@Column(nullable = false)
 	private float costo;
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "DATE")
 	private LocalDate fechaAlta;
 	private String pasajeros;
 	

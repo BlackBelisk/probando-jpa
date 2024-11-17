@@ -22,7 +22,7 @@ public class RutaFinalizada_JPA {
 	private String descCorta;
 	@Column(nullable = false)
 	private String desc;
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "TIME")
 	private LocalTime hora;
 	@Column(nullable = false)
 	private float costoT;
@@ -34,12 +34,12 @@ public class RutaFinalizada_JPA {
 	private String ciudadO;
 	@Column(nullable = false)
 	private String ciudadD;
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "DATE")
 	private LocalDate fechaAlta;
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "DATE")
 	private LocalDate fechaBaja;
 	@ManyToOne
-	private Aerolinea_JPA aerolineaID;
+	private Aerolinea_JPA aerolinea;
 	
 	
 	public RutaFinalizada_JPA() {}

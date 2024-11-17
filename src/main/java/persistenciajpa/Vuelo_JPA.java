@@ -17,7 +17,7 @@ public class Vuelo_JPA {
 	private int VueloID;
 	@Column(nullable = false, unique = true)
 	private String nombre;
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "DATE")
 	private LocalDate fecha;
 	@Column(nullable = false)
 	private int duracion;
@@ -25,7 +25,7 @@ public class Vuelo_JPA {
 	private int maxTurista;
 	@Column(nullable = false)
 	private int maxEjecutivo;
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "DATE")
 	private LocalDate fechaAlta;
 	@ManyToOne
 	private RutaFinalizada_JPA rutaFinalizadaID;
