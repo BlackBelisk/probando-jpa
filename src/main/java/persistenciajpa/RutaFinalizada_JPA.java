@@ -3,6 +3,7 @@ package persistenciajpa;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,16 +16,27 @@ import jakarta.persistence.Table;
 public class RutaFinalizada_JPA {
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int rutaFinalizadaID;
+	@Column(nullable = false, unique = true)
 	private String nombre;
+	@Column(nullable = false)
 	private String descCorta;
+	@Column(nullable = false)
 	private String desc;
+	@Column(nullable = false)
 	private LocalTime hora;
+	@Column(nullable = false)
 	private float costoT;
+	@Column(nullable = false)
 	private float costoE;
+	@Column(nullable = false)
 	private float costoEE;
+	@Column(nullable = false)
 	private String ciudadO;
+	@Column(nullable = false)
 	private String ciudadD;
+	@Column(nullable = false)
 	private LocalDate fechaAlta;
+	@Column(nullable = false)
 	private LocalDate fechaBaja;
 	@ManyToOne
 	private int aerolineaID;

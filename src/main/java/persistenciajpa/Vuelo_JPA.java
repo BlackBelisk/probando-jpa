@@ -2,6 +2,7 @@ package persistenciajpa;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,11 +15,17 @@ import jakarta.persistence.Table;
 public class Vuelo_JPA {
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int VueloID;
+	@Column(nullable = false, unique = true)
 	private String nombre;
+	@Column(nullable = false)
 	private LocalDate fecha;
+	@Column(nullable = false)
 	private int duracion;
+	@Column(nullable = false)
 	private int maxTurista;
+	@Column(nullable = false)
 	private int maxEjecutivo;
+	@Column(nullable = false)
 	private LocalDate fechaAlta;
 	@ManyToOne
 	private int rutaFinalizadaID;

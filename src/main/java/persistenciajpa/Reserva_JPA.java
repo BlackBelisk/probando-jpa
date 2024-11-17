@@ -2,6 +2,7 @@ package persistenciajpa;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
@@ -19,11 +20,15 @@ public class Reserva_JPA{
 	private int ClienteID;
 	@ManyToOne
 	private int VueloID;
-	@Enumerated
+	@Enumerated @Column(nullable = false)
 	private TipoAsiento tipoAsiento;
+	@Column(nullable = false)
 	private int cantPasajes;
+	@Column(nullable = false)
 	private int cantEE;
+	@Column(nullable = false)
 	private float costo;
+	@Column(nullable = false)
 	private LocalDate fechaAlta;
 	private String pasajeros;
 	
