@@ -3,8 +3,6 @@ package persistenciajpa;
 import java.time.LocalDate;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.DiscriminatorColumn;
-import jakarta.persistence.DiscriminatorType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
@@ -21,11 +19,20 @@ public class Cliente_JPA extends Usuario_JPA{
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int ClienteID;
 	
+	@Column(nullable = false)
 	private String apellido;
+	
+	@Column(nullable = false)
 	private LocalDate fecha_nacimiento;
+	
+	@Column(nullable = false)
 	private String nacionalidad;
+	
 	@Enumerated
+	@Column(nullable = false)
 	private TipoDocumento tipo_documento;
+	
+	@Column(nullable = false)
 	private String num_documento;
 	
 	public Cliente_JPA() {}

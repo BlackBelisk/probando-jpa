@@ -15,10 +15,13 @@ import jakarta.persistence.Table;
 public class Aerolinea_JPA extends Usuario_JPA{
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int AerolineaID;
-	private String descripcion;
 	
 	@Column(nullable = false)
+	private String descripcion;
+	
+	@Column(nullable = true)
 	private String sitio_web;
+	
 	public Aerolinea_JPA() {
 		
 	}

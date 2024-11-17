@@ -1,5 +1,6 @@
 package persistenciajpa;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.DiscriminatorType;
 import jakarta.persistence.Enumerated;
@@ -20,10 +21,16 @@ public class Usuario_JPA {
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int UsuarioID;
 	
+	@Column(nullable = false, unique = true)
 	private String nickname;
+	
+	@Column(nullable = false, unique = true)
 	private String email;
+	
+	@Column(nullable = false)
 	private String nombre;
 	
+	@Column(nullable = false)
 	@Enumerated
 	private TipoUsuario tipo_usuario;
 	
